@@ -1,0 +1,77 @@
+import tkinter as tk
+from tkinter import ttk
+
+# Create the GUI window
+window = tk.Tk()
+window.title("American Football Stats Input")
+
+# Create the labels for the input fields
+player_name_label = ttk.Label(text="Player Name")
+sacks_label = ttk.Label(text="Sacks")
+tackles_label = ttk.Label(text="Tackles")
+interceptions_label = ttk.Label(text="Interceptions")
+carries_label = ttk.Label(text="Carries")
+yards_per_carry_label = ttk.Label(text="Yards per Carry")
+yards_per_catch_label = ttk.Label(text="Yards per Catch")
+touchdowns_label = ttk.Label(text="Touchdowns")
+
+# Create the input fields
+player_name_entry = ttk.Entry()
+sacks_entry = ttk.Entry()
+tackles_entry = ttk.Entry()
+interceptions_entry = ttk.Entry()
+carries_entry = ttk.Entry()
+yards_per_carry_entry = ttk.Entry()
+yards_per_catch_entry = ttk.Entry()
+touchdowns_entry = ttk.Entry()
+
+# Create the button to submit the data
+submit_button = ttk.Button(text="Submit")
+
+# Layout the GUI elements
+player_name_label.grid(row=0, column=0)
+player_name_entry.grid(row=0, column=1)
+sacks_label.grid(row=1, column=0)
+sacks_entry.grid(row=1, column=1)
+tackles_label.grid(row=2, column=0)
+tackles_entry.grid(row=2, column=1)
+interceptions_label.grid(row=3, column=0)
+interceptions_entry.grid(row=3, column=1)
+carries_label.grid(row=4, column=0)
+carries_entry.grid(row=4, column=1)
+yards_per_carry_label.grid(row=5, column=0)
+yards_per_carry_entry.grid(row=5, column=1)
+yards_per_catch_label.grid(row=6, column=0)
+yards_per_catch_entry.grid(row=6, column=1)
+touchdowns_label.grid(row=7, column=0)
+touchdowns_entry.grid(row=7, column=1)
+submit_button.grid(row=8, column=0)
+
+ # Define the function to handle the submit button click
+def submit_data():
+    # Get the data from the input fields
+  player_name = player_name_entry.get()
+  sacks = sacks_entry.get()
+  tackles = tackles_entry.get()
+  interceptions = interceptions_entry.get()
+  carries = carries_entry.get()
+  yards_per_carry = yards_per_carry_entry.get()
+  yards_per_catch = yards_per_catch_entry.get()
+  touchdowns = touchdowns_entry.get()
+
+# Do something with the data
+print("Player name:", player_name)
+print("Sacks:", sacks)
+print("Tackles:", tackles)
+print("Interceptions:", interceptions)
+print("Carries:", carries)
+print("Yards per carry:", yards_per_carry)
+print("Yards per catch:", yards_per_catch)
+print("Touchdowns:", touchdowns)
+
+# Bind the submit button to the submit_data function
+submit_button.config(command=submit_data)
+
+# Start the GUI event loop
+window.mainloop()
+
