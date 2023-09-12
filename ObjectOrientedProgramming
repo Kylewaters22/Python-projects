@@ -1,0 +1,7 @@
+from car import Car
+
+car_1 = Car("Chevy","Tahoe",2023,"matte black")
+car_2 = Car("Ford", "Expedition", 2008,"Green")
+
+car_1.drive()
+car_1.stop()
