@@ -1,0 +1,8 @@
+# w = write a line of text
+# a = Append when you want to write a new line of txt after you already written and save text. 
+
+
+text = "Have a nice day! See ya"
+
+with open('test.txt','a') as file:
+    file.write(text)
