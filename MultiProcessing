@@ -6,12 +6,12 @@
 #                   multithreading = better for io bound tasks (waiting around)
 # ***********************************
 
+from multiprocessing import Process, cpu_count
+import time
 def counter(num):
     count = 0
     while count < num:
         count += 1
-
-
 def main():
 
     print("cpu count:", cpu_count())
@@ -22,16 +22,14 @@ def main():
     a.start()
     b.start()
 
-    print("processing...")
-
     a.join()
     b.join()
 
-    print("Done!")
+
     print("finished in:", time.perf_counter(), "seconds")
 
 
-if _name_ == '__main__':
+if __name__ == '__main__':
     main()
 
 # *********************************
